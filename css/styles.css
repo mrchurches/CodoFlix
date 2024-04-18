@@ -51,35 +51,63 @@ main{
     padding-right: 1rem;
 }
 
-.modal-off{
-    pointer-events: initial;
+/* modal */
+
+.modal-off{    
     display: none;
 }
 
 .modal-on{    
+    display: grid;
+    align-items: center;
     position: fixed;    
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     backdrop-filter: blur(3px);/* desenfoque */
-    background-color: #000000a7;
-    max-height: 100vw;
+    background-color: #000000a7;/* negro c/alpha */
+    max-height: 100vh;
+    max-width: 100vw;
 }
 
 .modal-container{
-display: flex;
+display: grid;
 justify-content: center;
 align-items: normal;
 position: relative;
-margin:0 auto;
-
-width: 90%;
-height: 90%; 
-
+/* margin:0 auto; */
+margin-top: 2.5rem;
+margin-left: 1rem;
+margin-right: 1rem;
+width: 100%;
+background-color: #000000;
 }
 
+.ficha-tecnica{
+    display: grid;
+    color:aliceblue;
+    grid-gap: 5px;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr ;
+}
+
+.titulo{
+    grid-area: 1 / 1 / span 1 / span 2 ;/* ({comienza} fila / columna /{abarca} span fila / span columna) */
+    width: 100%;
+}
+.argumento{
+    grid-area: 2 / 1 /span 1/span 2;
+    width: 100%;}
+.elenco{
+    grid-area: 3 / 1 / span 1;
+    width: 100%;}
+.tecnicos{
+    grid-area: 3 / 2 / span 1;
+    width: 100%;}
+
 iframe{
+    margin-top: 0;
     width: 100%;
     height: 50%;
 }
