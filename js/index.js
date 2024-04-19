@@ -31,48 +31,48 @@ function mostrarModal (){
     <h2 class="titulo">Los muchachos de antes no usaban gomina</h2>
           
     <div class="argumento">
-    <h3>Argumento</h3>
-    <p>Un joven de buena familia, aconsejado por su padre, rompe con su novia para casarse con una chica de la alta sociedad. Ya en la madurez, casado, viejo y aburrido, rememora con tristeza el pasado. Se realza aquí también el valor de la amistad, aquella que tiene el joven de buena familia con su inseparable "Mocho".</p>
+    <p>Un joven de buena familia, aconsejado por su padre, rompe con su novia para casarse con una chica de la alta sociedad.
+     Ya en la madurez, casado, viejo y aburrido, rememora con tristeza el pasado. Se realza aquí también el valor de la amistad,
+      aquella que tiene el joven de buena familia con su inseparable "Mocho".</p>
     </div>
 
 
     <div class="elenco">
     <h3>Elenco</h3>
     <ul>
-        <li>Rodolfo Bebán</li>
-        <li>Susana Campos</li>
-        <li>Osvaldo Miranda</li>
+        <li>Florencio Parravicini</li>
+        <li>Mecha Ortiz</li>
+        <li>Santiago Arrieta</li>
+        <li>Irma Córdoba</li>
     </ul>
     </div>
 
     
     <div class="tecnicos">
-    <h3>Detalles Técnicos</h3>
+    
     <table>
         <tr>
-            <td>País</td>
+            <td><span>País: </span></td>
             <td>Argentina</td>
         </tr>
         <tr>
-            <td>Año</td>
-            <td>1969</td>
+            <td><span>Año: </span></td>
+            <td>1937</td>
         </tr>
         <tr>
-            <td>Género</td>
+            <td><span>Género: </span></td>
             <td>Comedia</td>
         </tr>
         <tr>
-            <td>Duración</td>
-            <td>115 minutos</td>
+            <td><span>Duración: </span></td>
+            <td>90 minutos</td>
         </tr>
         <tr>
-            <td>Idioma(s)</td>
-            <td>Español</td>
+            <td><span>Idioma(s): </span></td>
+            <td>Argentino Rioplatense</td>
         </tr>
     </table>
-    </div>`
-        
-    ;
+    </div>`;
     modalContainer.appendChild(fichaTecnica);
     
 };
