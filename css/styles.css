@@ -3,13 +3,17 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-color: #141414;  
+    color: #fff;
+}
 main{
     z-index: 1;/*para no interactuar con modal cuando se superponga*/
     overflow: auto;
 }
 a{
     text-decoration: none;
-    color: black;
+    color: #fff;
 }
 
 #logo{
@@ -25,7 +29,8 @@ width: 110px;
     justify-content: space-between;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
     margin: 0;
-    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     transition: background-color 0.5s ease;
     /* background-clip: content-box */
     will-change: background-color;
@@ -48,6 +53,9 @@ nav ul{
 }
 
 main{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     margin: 0;
     padding-top: 2.5rem;
     padding-left: 1rem;
@@ -99,7 +107,7 @@ overflow: auto;
         color: #777;
     }
     overflow-y: auto;
-    
+    overflow-x: hidden;    
 }
 
 .titulo{
@@ -140,6 +148,28 @@ iframe{
     margin-top: 0;
     width: 100%;
     height: 100%;
+}
+
+/* mY lIST */
+.card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.card{
+    transition: all 300ms;
+}
+.card a{
+    width: 100%;
+}
+.card a img{
+    width: 100%;
+    margin: 15px;
+}
+
+.card:hover{
+    transform: scale(1.2);
 }
 
 /* @media (max) */
