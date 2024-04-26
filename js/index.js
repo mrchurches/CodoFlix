@@ -12,22 +12,21 @@ window.addEventListener('scroll', function() {
 var iframe = document.createElement('iframe');
 iframe.src = 'https://www.youtube.com/embed/_0fADAoqo10?si=nMqkXObUgbdy8dh_';
 iframe.title = 'YouTube video player';
+
 /* iframe.width = '100%';
 iframe.height = '50%'; */
 iframe.allowFullscreen = true;
 const peli = document.getElementById ('peli');
-const modal = document.querySelector('.modal-off');
+var modal = document.querySelector('.modal-off');
 
 peli.onclick = mostrarModal ;
 
-function mostrarModal (){
-    modal.classList.replace('modal-off' , 'modal-on');
-    let modalContainer = document.querySelector('.modal-container');
-    modalContainer.appendChild(iframe);
+var modalContainer = document.querySelector('.modal-container');
+var fichaTecnica = document.createElement('div');
 
-    var fichaTecnica = document.createElement('div');
-    fichaTecnica.classList.add('ficha-tecnica');
-    fichaTecnica.innerHTML = `
+fichaTecnica.classList.add('ficha-tecnica');
+fichaTecnica.innerHTML = `
+    <button id="boton-volver">volver</button>
     <h2 class="titulo">Los muchachos de antes no usaban gomina</h2>
           
     <div class="argumento">
@@ -72,7 +71,19 @@ function mostrarModal (){
             <td>Argentino Rioplatense</td>
         </tr>
     </table>
-    </div>`;
-    modalContainer.appendChild(fichaTecnica);
-    
+    </div>
+`;
+
+modalContainer.appendChild(iframe);
+modalContainer.appendChild(fichaTecnica);
+const boton = document.getElementById('boton-volver');
+
+boton.onclick = ocultarModal ;
+
+function mostrarModal (){
+    modal.classList.replace('modal-off' , 'modal-on');        
+};
+
+function ocultarModal () {
+    modal.classList.replace('modal-on','modal-off');
 };
