@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Login</title>
+   <style>
+      body{
+         font-family: Arial, Helvetica, sans-serif;
+         padding: 0;
+         margin: 0 auto;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         height: 100vh;
+         background-color: blueviolet
+
+      }
+
+      .form-container{
+         background-color: white;
+         margin: 0 auto;
+         width: 80%;
+         min-width: 350px;
+         border-radius: 10px;
+         overflow: hidden;
+         height: 90%;
+         display: flex;
+         align-items: center;
+      }
+
+      .form-container .login-container{
+         width: 50%;
+         margin: 0 auto;
+         padding: 0 10px 0 10px;
+      }
+
+      .form-container .login-container > h2 {
+         text-align: center;
+         font-size: 2.5rem;
+      }
+   
+      .form-container .login-container > p,
+      .form-container .login-container > span {
+         text-align: center;
+         color: #555;
+      }
+   
+      .form-container .login-container label {
+         display: block;       /* ocupa todo el ancho */
+         font-weight: bold;
+         padding: 5px 0;
+      }
+   
+      .form-container .login-container input.input_text {
+         display: block;
+         width: 100%;
+         box-sizing: border-box;
+         padding: 10px;
+         border: solid 2px #ccc;
+         border-radius: 5px;
+      }
+
+      .form-container .login-container input.input_text:focus {
+         outline: solid 2px #0099ff;
+      }
+
+      .form-container .login-container .options{
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+      }
+
+      .form-container a {
+         color: #0099ff;
+         text-decoration: none;
+      }
+
+      .form-container a:hover {
+         text-decoration: underline;
+      }
+
+      .form-container .login-container .providers{
+         display: flex;
+         flex-direction: column;
+         gap: 10px;
+         text-align: center;
+         margin-top: 30px;
+      }
+
+      .btn{
+         border: none;
+         padding: 15px 0;
+         width: 100%;
+         font-weight: bolder;
+         display: block;
+         border-radius: 5px;
+         text-transform: uppercase;
+         cursor: pointer;
+      }
+
+      .btn.btn-login {
+         background-color: black;
+         color: white;
+      }
+
+      .btn.btn-login:hover {
+         background-color: #565656;
+      }
+
+      .btn.btn-facebook {
+         background-color: rgb(10, 82, 216);
+         color: white;
+      }
+
+      .btn.btn-facebook:hover {
+         background-color: rgb(6, 44, 115);
+      }
+
+      .btn.btn-google {
+         background-color: white;
+         color: black;
+         border: solid 1px #ccc;
+      }
+
+      .btn.btn-google:hover {
+         background-color: rgba(235, 234, 234, 0.269);
+      }
+
+      .btn.btn-twitter {
+         background-color: rgb(10,168,216);
+         color: white;
+      }
+
+      .btn.btn-twitter:hover {
+         background-color: rgb(8, 113, 145);
+      }
+
+      .form-container .welcome-screen-container{
+         background-color: black;
+         width: 50%;
+         height: 100%;
+      }
+
+        
+      @media screen and (max-width: 900px) {
+         .form-container .login-container{
+            width: 100%;
+         }
+         .form-container .welcome-screen-container{
+            display: none;
+         }
+      } 
+</style>
+</head>
+<body>
+   <div class="form-container">
+      <div class="login-container">
+         <h2>Welcome</h2>
+         <p>Selecciona el metodo de autenticacion</p>
+         <form action="">
+            <p>
+               <label for="username">Username</label>
+               <input class="input_text" type="text" name="username" id="username">
+            </p>
+            <p>
+               <label for="password">Password</label>
+               <input class="input_text" type="text" name="password" id="password">
+            </p>
+            <div class="options">
+               <div>Remember me
+                   <input type="checkbox" name="rememberme" id="rememberme">
+               </div>
+               <div>
+                   <a href="#">I forgot me password</a>
+               </div>
+            </div>
+            <p>
+               <input type="submit" class="btn btn-login" value="Log in">
+            </p>
+            <div class="providers">
+               <span>Chose another method to authenticate</span>
+               <button class="btn btn-google">Google</button>
+               <button class="btn btn-facebook">Facebook</button>
+               <button class="btn btn-twitter">Twitter</button>
+            </div>
+         </form>
+      </div>
+      <div class="welcome-screen-container">
+
+      </div>
+   </div>
+</body>
+</html>
