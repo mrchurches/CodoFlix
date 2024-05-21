@@ -9,20 +9,20 @@ window.addEventListener('scroll', function() {
 });
 
 /*modal*/
-var iframe = document.createElement('iframe');
+let iframe = document.createElement('iframe');
 iframe.src = 'https://www.youtube.com/embed/_0fADAoqo10?si=nMqkXObUgbdy8dh_';
 iframe.title = 'YouTube video player';
 
 /* iframe.width = '100%';
 iframe.height = '50%'; */
 iframe.allowFullscreen = true;
-const peli = document.getElementById ('peli');
-var modal = document.querySelector('.modal-off');
+const PELI = document.getElementById ('peli');
+let modal = document.querySelector('.modal-off');
 
-peli.onclick = mostrarModal ;
+PELI.onclick = mostrarModal ;
 
-var modalContainer = document.querySelector('.modal-container');
-var fichaTecnica = document.createElement('div');
+let modalContainer = document.querySelector('.modal-container');
+let fichaTecnica = document.createElement('div');
 
 fichaTecnica.classList.add('ficha-tecnica');
 fichaTecnica.innerHTML = `
@@ -76,9 +76,9 @@ fichaTecnica.innerHTML = `
 
 modalContainer.appendChild(iframe);
 modalContainer.appendChild(fichaTecnica);
-const boton = document.getElementById('boton-volver');
+const BOTON = document.getElementById('boton-volver');
 
-boton.onclick = ocultarModal ;
+BOTON.onclick = ocultarModal ;
 
 function mostrarModal (){
     modal.classList.replace('modal-off' , 'modal-on');        
@@ -87,3 +87,10 @@ function mostrarModal (){
 function ocultarModal () {
     modal.classList.replace('modal-on','modal-off');
 };
+
+let dato =123+"1";
+console.log(typeof(dato));
+
+//media my list
+
+
